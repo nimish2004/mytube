@@ -1,0 +1,236 @@
+/* General styles for the App */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.site-logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.site-logo:hover {
+  color: #ff5252;
+}
+
+.nav-link {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #ddd;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #00bfff;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Search Bar */
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.search-input {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 70%;
+  margin-right: 10px;
+  max-width: 400px;
+}
+
+.search-button {
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #3700b3;
+}
+
+/* Video Layout: 1 video per row with title on the right side */
+.video-list {
+  display: flex;
+  flex-direction: column; /* Stack videos vertically */
+  gap: 20px; /* Space between videos */
+}
+
+.video-card {
+  display: flex;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 10px;
+  gap: 20px;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.video-card iframe {
+  width: 300px; /* Set a fixed width for the video */
+  height: 170px; /* Set a fixed height for the video */
+  border: none;
+  border-radius: 10px 0 0 10px; /* Round the left corners */
+}
+
+.video-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  flex-grow: 1; /* Take up remaining space */
+}
+
+.video-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.like-button {
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto;
+  height: 40px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+
+
+.like-button:hover {
+  background-color: #3700b3;
+}
+
+/* Liked Videos Page */
+.liked-page {
+  padding: 30px;
+}
+
+.liked-category {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.liked-category h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* Category-Specific Colors */
+.liked-category.music {
+  background-color: #ffe0b2;
+}
+
+.liked-category.news {
+  background-color: #c5e1a5;
+}
+
+.liked-category.comedy {
+  background-color: #ffccbc;
+}
+
+.liked-category.movies {
+  background-color: #f8bbd0;
+}
+
+.liked-category.others {
+  background-color: #e0e0e0;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .video-card iframe {
+    width: 250px; /* Slightly smaller video width for tablets */
+  }
+
+  .video-title {
+    font-size: 16px; /* Slightly smaller text for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .video-card iframe {
+    width: 100%; /* Full width video on small screens */
+    height: 180px;
+  }
+
+  .video-title {
+    font-size: 14px; /* Even smaller text for small devices */
+  }
+
+  .video-card {
+    flex-direction: column; /* Stack video and title vertically on small screens */
+  }
+
+  .video-card iframe {
+    border-radius: 10px;
+  }
+
+  .video-card-content {
+    padding: 10px;
+  }
+
+  .like-button {
+    font-size: 12px; /* Smaller font size for mobile */
+    padding: 6px 12px; /* Smaller padding on mobile */
+  }
+}
