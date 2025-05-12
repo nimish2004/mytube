@@ -16,7 +16,7 @@ A stylish React-based web application that allows users to search for YouTube vi
 
 ## 📸 Demo
 
-![MyTube Demo](demo-image.png) <!-- Replace with screenshot or link to demo if available -->
+![MyTube Demo](image.png) <!-- Replace with screenshot or link to demo if available -->
 
 ---
 
