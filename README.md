@@ -33,7 +33,7 @@ A stylish React-based web application that allows users to search for YouTube vi
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/your-username/mytube-video-search.git
+git clone https://github.com/nimish2004/mytube
 cd mytube-video-search
 npm install
 npm start
